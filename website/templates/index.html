@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intrusion Guard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <style>
+    /* Fixed Navbar Styling */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #343a40;
+      padding: 10px 0;
+    }
+    .navbar-nav .nav-link {
+      font-size: 1.2rem; /* Increased size */
+      font-weight: 500;  /* Make it bold */
+      padding: 10px 15px; /* Add padding for better click area */
+    }
+
+    /* Adjust body padding to prevent content overlap with navbar */
+    body {
+      padding-top: 70px;
+    }
+
+    /* Hero Section with Background Image */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('./static/home.webp') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    /* Sections Padding */
+    section {
+      padding: 100px 0;
+    }
+
+    /* About Section Styling */
+    .about-image img {
+      border-radius: 15px;
+      max-width: 70%; /* Reduced size */
+      display: block;
+      margin: auto; /* Centering */
+    }
+    /* About Page Content Styling */
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Bullet Points for Readability */
+.about-content ul {
+  list-style-type: disc; /* Adds default bullet points */
+  padding-left: 20px;
+}
+
+.about-content ul li {
+  margin-bottom: 10px; /* Adds spacing between points */
+}
+
+    h4 {
+      font-weight: normal; /* Makes text appear regular instead of bold */
+      font-size: 1.25rem; /* Adjust size to keep it readable */
+    }
+    #contact {
+      background: rgba(0, 0, 0, 0.7);
+      color: white; /* Makes text readable on the gradient */
+      padding: 100px 0;
+    }
+    .contact-card {
+      background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+      backdrop-filter: blur(10px); /* Adds blur effect for a glassmorphic look */
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 600px; /* Increased width */
+      width: 100%; /* Makes it responsive */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .contact-card input,
+    .contact-card textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+    .contact-card input::placeholder,
+    .contact-card textarea::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+}
+    .contact-card button {
+      background: white;
+      color:rgb(236, 61, 61);
+      font-weight: bold;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      transition: 0.3s;
+}
+    .contact-card button:hover {
+      background:rgb(236, 61, 61);
+      color: white;
+}
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Intrusion Guard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Started Button (Always Visible) -->
+      <button class="btn btn-outline-light ms-auto" onclick="location.href='/form'">Get Started</button>
+
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="fw-bold display-4">Advanced Intrusion Detection for Military Networks</h1>
+      <p class="lead">IntrusionGuard leverages cutting-edge feature engineering to detect and classify cyber threats in real time.
+         By analyzing network traffic using both qualitative and quantitative attributes, 
+         our system ensures robust security against evolving intrusion attempts.</p>
+    </div>
+  </section>
+
+  <section id="about" class="text-center">
+    <h2 class="fw-bold">About</h2>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="about-content">
+            <p>IntrusionGuard is a next-generation cybersecurity platform designed to safeguard military networks. Our approach involves:</p>
+            <ul>
+              <li><strong>Advanced Intrusion Detection:</strong> Utilizing machine learning to identify cyber threats in real-time.</li>
+              <li><strong>Threat Classification:</strong> Analyzing network activities and categorizing them as normal or potential attacks.</li>
+              <li><strong>Real-time Monitoring:</strong> Providing deep insights into network vulnerabilities and security breaches.</li>
+              <li><strong>Military-Grade Security:</strong> Optimized for high-security environments, ensuring top-tier protection.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 about-image">
+          <img src="./static/Access.jpg" class="img-fluid" alt="Access Security">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="contact" class="text-center">
+    <h2>Contact Us</h2>
+    <div class="container d-flex justify-content-center">
+      <div class="contact-card">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
